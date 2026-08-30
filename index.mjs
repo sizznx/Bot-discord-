@@ -90,7 +90,7 @@ function startHealthServer() {
     }
 
     const payload = JSON.stringify(getHealthPayload());
-    response.writeHead(state.discordReady && state.guildReady ? 200 : 503, {
+    response.writeHead(200, {
       "content-type": "application/json; charset=utf-8",
       "cache-control": "no-store",
     });
